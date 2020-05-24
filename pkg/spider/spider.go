@@ -134,7 +134,7 @@ func DownCourse() {
 			}
 		}
 
-		time.Sleep(60000 * time.Second)
+		time.Sleep(6000 * time.Second)
 	}
 }
 
