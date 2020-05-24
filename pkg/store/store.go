@@ -2,6 +2,7 @@ package store
 
 import (
 	"log"
+	"fmt"
 
 	"github.com/astaxie/beego/orm"
 
@@ -12,7 +13,7 @@ import (
 func RegisterDB(dbSource, dbName string) {
 	dbTimeout := options.GetOptions().DBTimeout
 	dataSource := fmt.Sprintf("%s%s?charset=utf8&%s", dbSource, dbName, dbTimeout)
-	orm.RegisterDriver(db.DBDriverName, orm.DBMySQL)
+	orm.RegisterDriver(db.DBDriverName, orm.DRMySQL)
 	orm.RegisterDataBase("default", db.DBDriverName, dataSource, 30)
 }
 
@@ -23,4 +24,6 @@ func InitDB() error {
 		log.Println("failed to create tables with err:", err)
 		return err
 	}
+	log.Println("orm.RunSyncdb success")
+        return nil
 }

@@ -1,7 +1,7 @@
 package options
 
 import (
-	"beehive/pkg/common/config"
+	"github.com/kubeedge/beehive/pkg/common/config"
 )
 
 type Options struct {

@@ -1,0 +1,10 @@
+如何使用
+
+1.执行脚本启动后台程序
+cd script && nohup bash start_server.sh &
+
+2.访问http://122.9.51.184:22222/index.html
+
+
+备注：
+1.依赖nginx，mysql(通过docker pull来安装)

@@ -1,27 +1,11 @@
 # Change history of go-restful
 
 
-v3.1.0
+v2.12.0
 
 - support describing response headers (#426)
 - fix openapi examples (#425)
-
-v3.0.0
-
-- fix: use request/response resulting from filter chain
-- add Go module
-  Module consumer should use github.com/emicklei/go-restful/v3 as import path
-
-v2.10.0
-
-- support for Custom Verbs (thanks Vinci Xu <277040271@qq.com>)
-- fixed static example (thanks Arthur <yang_yapo@126.com>)
-- simplify code (thanks Christian Muehlhaeuser <muesli@gmail.com>)
-- added JWT HMAC with SHA-512 authentication code example (thanks Amim Knabben <amim.knabben@gmail.com>)
-
-v2.9.6
-
-- small optimization in filter code
+- merge v3 fix (#422)
 
 v2.11.1
 

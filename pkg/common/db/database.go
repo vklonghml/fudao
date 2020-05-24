@@ -3,7 +3,7 @@ package db
 import (
 	"database/sql"
 	"fmt"
-	"strings"
+	"log"
 
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -21,6 +21,7 @@ const (
 // }
 
 func CreateDBIfNeeded(dataSource, dbName string) error {
+	log.Println("dataSource:", dataSource, "dbName", dbName)
 	conn, err := sql.Open(DBDriverName, dataSource)
 	if err != nil {
 		if conn != nil {

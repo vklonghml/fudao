@@ -2,6 +2,8 @@ package server
 
 import (
 	"log"
+	"net/http"
+	"fmt"
 
 	"fudao/cmd/options"
 	"fudao/pkg/common/db"
@@ -30,5 +32,7 @@ func StartServer(opts *options.Options) error {
 	router.Register()
 	log.Println("start listening on add: %s, port: %s", opts.Address, opts.Port)
 	addr := fmt.Sprintf("%s:%s", opts.Address, opts.Port)
-	log.Fatal(http.ListenAndServe(addr, nil))
+	log.Println(addr)
+	log.Fatal(http.ListenAndServe(":12345", nil))
+	return nil
 }

@@ -14,7 +14,8 @@ func init() {
 }
 
 type Course struct {
-	CourseID string  `orm:"pk; column(CourseID); size(64)`
+	IDInc    int     `orm:"pk; auto"`
+	CourseID string  `orm:"column(CourseID); size(64)`
 	Name     string  `orm:"column(Name); size(64)`
 	Price    float64 `orm:"column(Price); default(0.0)`
 	Teacher  string  `orm:"column(Teacher); size(64)`
@@ -29,3 +30,4 @@ func (c *Course) TablerUnique() [][]string {
 		{TableName_CourseID},
 	}
 }
+
